@@ -34,6 +34,9 @@ h1{
     margin-left: 10px;
     text-align: center;
 }
+h2:not(#pro, #scolaire){
+    text-align: center;
+}
 
 body{
     background-color: rgba(0, 0, 0, 0.836);

@@ -45,7 +45,8 @@ body{
 }
 .section{
     margin-top: 128px;
-    margin-left: 12px
+    margin-left: 12px;
+    margin-bottom: 100px;
 }
 .section:not(#parcours) p{
     text-align: center;

@@ -16,10 +16,12 @@
     align-items: center;
     text-decoration: none;
     color:azure;
+    cursor:pointer;
 }
 #onglet a:hover{
     background-color: rgb(0, 119, 255);
 }
+
 html,body{
     margin: 0; 
     padding: 0;
@@ -43,6 +45,8 @@ body{
     color: white;
     font-family: Arial;
 }
+
+/* englobe tous les onglets */
 .section{
     margin-top: 128px;
     margin-left: 12px;
@@ -51,6 +55,11 @@ body{
 .section:not(#parcours) p{
     text-align: center;
 }
+.section  >h1{
+    margin-bottom: 100px;
+}
+/* fin section */
+
 #porto{
     padding-top: 128px;
 }
@@ -69,4 +78,79 @@ body{
 }
 #img{
     text-align: center;
+}
+
+/* page parcours */
+#parc-contour{
+    display:flex;
+    column-gap: 12px;
+}
+#parc-contour >.parc:first-child{
+    border-right: solid 2px white;
+}
+.parc{
+    flex:1 1 0
+}
+.parc h2{
+    text-align: center;
+}
+
+/* bouton (cv, synthèse et veille) */
+.bouton{
+    margin: 0 auto;
+    display: block;
+    margin-top: 100px;
+    background-color: rgb(0, 174, 255);
+    border: none;
+    box-shadow: none;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 8px;
+}
+.bouton:hover{
+    background-color: rgb(0, 119, 255);
+}
+
+/* page projet */
+.projecto{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 48px;
+    justify-content: space-evenly;
+    column-gap: 20px;
+    row-gap: 24px;
+}
+.projecto .projet{
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: gray;
+    padding: 16px;
+    border-radius: 5px;
+    flex: 1 1;
+}
+.projet img{
+    max-height: 48px;
+}
+
+dialog{
+    height: 100%;
+    width: 100%;
+    border-radius: 8px;
+    border: none;
+    max-height: calc((100% - 6px) - 2em);
+    max-width: calc((100% - 6px) - 2em);
+    background-color: grey;
+}
+dialog iframe{
+    height: 100%;
+    width: 100%;
+    border: none;
+}
+dialog .close{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 6px;
 }

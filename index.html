@@ -27,10 +27,44 @@
                 .then((heiraten) => { return heiraten.text() })
                 .then((delusion) => {
                     document.getElementById("all").innerHTML=delusion;
+                    if(id=="projets") projet()
                 });
+                
+        }
+        function projet() {
+            document.querySelectorAll(".projet a").forEach((a) => {
+
+        const file=a.href
+        a.onclick=(e) => {
+            e.preventDefault()
+            createDialog(file)
+        }
+    });
+
         }
 
         loadContent('accueil');
+        function createDialog(file){
+    const dialog=document.createElement("dialog");
+    dialog.innerHTML=`<iframe src="${file}"></iframe>`;
+    const closebtn=document.createElement("button");
+    closebtn.textContent="X"
+    closebtn.classList.add("close")
+    closebtn.onclick=() => {
+        dialog.remove()
+    }
+    dialog.appendChild(closebtn)
+    document.body.appendChild(dialog);
+    openDialog(dialog)
+    } 
+    function openDialog(dialog) {
+    document.body.style.overflow = "hidden";
+    if(typeof(dialog.showModal) !== "function") {
+    dialog.style.cssText = "position: fixed; display: block; top: 0;";
+    } else {
+    dialog.showModal();
+    }        
+    }
     </script>
 </body>
 </html>

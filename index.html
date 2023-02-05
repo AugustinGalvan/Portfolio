@@ -51,7 +51,8 @@
     closebtn.textContent="X"
     closebtn.classList.add("close")
     closebtn.onclick=() => {
-        dialog.remove()
+        dialog.remove();
+        document.body.style.overflow="visible"
     }
     dialog.appendChild(closebtn)
     document.body.appendChild(dialog);

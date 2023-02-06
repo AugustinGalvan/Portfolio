@@ -155,7 +155,15 @@ dialog .close{
     padding: 6px;
 }
 
+.socials {
+    min-height: 48px;
+    display: flex;
+    justify-content: center;
+}
+.socials a {
+    height: 100%;
+    width: 48px;
+}
 .reseaux{
     max-height: 48px;
-    fill: yellowgreen;
 }

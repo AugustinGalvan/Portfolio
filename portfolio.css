@@ -154,3 +154,8 @@ dialog .close{
     left: 0;
     padding: 6px;
 }
+
+.reseaux{
+    max-height: 48px;
+    fill: yellowgreen;
+}
